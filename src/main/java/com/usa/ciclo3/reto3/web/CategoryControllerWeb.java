@@ -33,8 +33,9 @@ public class CategoryControllerWeb {
         return categoryServices.getAll();
     }
 
-    @GetMapping("/{id}")
-    public Optional<Category> getCategory(@PathVariable("id") int id) {
+    @GetMapping("/{idCategory}")
+    public Optional<Category> getCategory(@PathVariable("idCategory") int id) {
+
         return categoryServices.getCategory(id);
     }
 
