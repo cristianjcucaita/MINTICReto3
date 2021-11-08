@@ -34,10 +34,10 @@ public class PartyroomControllerWeb {
         return partyroomServices.getAll();
     }
 
-    @GetMapping("/{idPartyroom}")
-    public Optional<Partyroom> getPartyroom (@PathVariable("id") int id) {
+    @GetMapping("/{id}")
+    public Optional<Partyroom> getPartyroom (@PathVariable("id") int idPartyroom) {
 
-        return partyroomServices.getPartyroom(id);
+        return partyroomServices.getPartyroom(idPartyroom);
     }
 
     @PostMapping("/save")
