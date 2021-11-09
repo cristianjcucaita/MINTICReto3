@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class MessageServices {
+public class            MessageServices {
 
     @Autowired
     private MessageRepository messageRepository;
@@ -42,6 +42,8 @@ public class MessageServices {
             if (!e.isEmpty()) {
                 if (message.getMessageText()!= null) {
                     e.get().setMessageText(message.getMessageText());
+                    e.get().setClient(message.getClient());
+                    e.get().setPartyroom(message.getPartyroom());
                 }
                 messageRepository.save(e.get());
                 return e.get();

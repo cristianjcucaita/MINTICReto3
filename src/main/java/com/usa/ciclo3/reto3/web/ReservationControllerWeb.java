@@ -46,20 +46,18 @@ public class ReservationControllerWeb {
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public Reservation save(@RequestBody Reservation reservation) {
-        return
-                reservationServices.save(reservation);
+        return reservationServices.save(reservation);
     }
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public Reservation update(@RequestBody Reservation reservation) {
-        return
-                reservationServices.update(reservation);
+        return reservationServices.update(reservation);
     }
+
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("id") int idReservation) {
-        return
-                reservationServices.deleteReservation(idReservation);
+        return reservationServices.deleteReservation(idReservation);
     }
 
     @GetMapping("/report-status")
@@ -75,8 +73,6 @@ public class ReservationControllerWeb {
     @GetMapping("/report-clients")
     public List<CounterClients> getClients() {
         return reservationServices.getTopClients();
-
-
     }
 }
 
